@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bookmark</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/imgs/favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">  
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container py-5">
+    <header>
+        <h1 class="main-heading">
+            Bookmarker
+        </h1>
+    </header>
+    <main class="main-content py-5 my-5">
+        <h2 class="fav-site text-center">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="my-4">
+            <label for="siteName" class="form-label fw-bolder fs-5"><i class="fa-solid fa-book me-2"></i>Site Name</label>
+            <input type="text" class="form-control fs-5" id="siteName" placeholder="Bookmark Name">
+        </div>
+        <div class="my-4">
+            <label for="websiteUrl" class="form-label fw-bolder fs-5"><i class="fa-solid fa-link me-2"></i>Site URL</label>
+            <input type="url" class="form-control fs-5" id="websiteUrl" placeholder="Website URL">
+        </div>
+        <div class="sub-btn text-center">
+        <button class="btn btn-lg px-5 py-1 submit-button" id="submitBtn">Submit</button>
+        <button class="btn btn-lg px-5 py-1 btn-warning text-white d-none" id="updateBtn">Update</button>
+        </div>
+        </main>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="px-5">index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+            <!-- Modal HTML -->
+<!-- Modal Structure -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="errorModalLabel">Error</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p class="fw-bolder">Site Name or Url is not valid, Please follow the rules below :</p>
+            <p>Site name must contain at least 3 characters</p>
+            <p>Site URL must be a valid one</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Main JS -->
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
